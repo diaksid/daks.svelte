@@ -9,7 +9,7 @@
 
   main {
     @apply relative
-           min-h-screen pt-16 pb-8;
+           min-h-screen pt-16 pb-8 overflow-y-hidden;
   }
 
   h1 {
