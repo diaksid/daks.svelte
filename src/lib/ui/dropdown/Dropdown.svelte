@@ -32,7 +32,6 @@
       use:outside={close}
       on:click|preventDefault|stopPropagation={toggle}
       on:dblclick
-      on:keypress
       id="menu-button"
       type="button"
       class="inline-flex w-full justify-center px-4 py-2

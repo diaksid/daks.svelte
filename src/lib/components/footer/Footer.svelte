@@ -16,7 +16,10 @@
            flex flex-row justify-between items-center
            leading-loose font-mono font-thin text-2xs xs:text-xs sm:text-sm sm:tracking-wide text-gray-500/75
            {className}">
-    <div class="ml-4">DVA © Москва 2022</div>
+    <div class="ml-4">
+      <a href="/admin">DVA</a>
+      © Москва 2022
+    </div>
     <div class="mr-4">
       <a
         rel="noreferrer nofollow"

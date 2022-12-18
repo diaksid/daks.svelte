@@ -9,7 +9,7 @@
 <svelte:element
   this={tag}
   on:click={handle}
-  on:keypress
+  on:keypress={() => null}
   role="menuitem"
   class="block
          px-4 py-2

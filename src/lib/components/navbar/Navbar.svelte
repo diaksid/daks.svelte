@@ -96,12 +96,16 @@
           href={link.href}
           on:click={click}>
           {#if link.href === '/'}
+            <!-- line-md:home-simple{$page.url.pathname === '/' ? '-twotone' : ''} -->
+            <!-- mdi:home{$page.url.pathname === '/' ? '' : '-outline'} -->
             <Icon
-              class="-ml-2 lg:ml-0 linecap-round linejoin-round"
-              icon="mdi:home{$page.url.pathname === '/' ? '' : '-outline'}"
-              inline={true}
-              width="28"
-              height="28" />
+              class="mt-0.5"
+              icon="line-md:home-simple{$page.url.pathname === '/' ? '-twotone' : ''}"
+              inline={false}
+              width="24"
+              height="24">
+              {@html link.label}
+            </Icon>
           {:else}
             {@html link.label}
           {/if}
