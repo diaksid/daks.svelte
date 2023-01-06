@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { outside } from '$utils/event';
+  import { outside } from 'daks-svelte/utils/event';
   import Items from './Items.svelte';
   import Item from './Item.svelte';
 
@@ -13,15 +13,12 @@
   export let items!: MenuItem[] | MenuItem[][];
 
   const classes = ['pointer-events-none', 'opacity-0', 'scale-75'];
-  const close = (node: null | HTMLElement) => {
-    const el = node?.parentElement?.nextElementSibling;
-    el?.classList.contains('pointer-events-none') || el?.classList.add(...classes);
-  };
-  const toggle = (ev: Event) => {
-    const el = (ev.target as HTMLElement).parentElement?.nextElementSibling;
-    if (el?.classList.contains('pointer-events-none')) el.classList.remove(...classes);
-    else el?.classList.add(...classes);
-  };
+
+  const close = (node?: HTMLElement) =>
+    node?.parentElement?.nextElementSibling?.classList.add(...classes);
+
+  const toggle = (event: any) =>
+    classes.forEach((val) => event.target.parentElement?.nextElementSibling?.classList.toggle(val));
 </script>
 
 <div

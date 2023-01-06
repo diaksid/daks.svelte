@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Dropdown } from '$ui/dropdown';
-  import Select from '$ui/select/Select.svelte';
-  import { Hit as Metrika } from '$ui/yandex/metrika';
+  import Dropdown from '$lib/ui/dropdown';
+  import Select from '$lib/ui/select';
+  import { YandexMetrikaHit } from 'daks-svelte';
 
   const items = [
     [{ label: 'Пункт 0 0', href: '' }],
@@ -18,23 +18,23 @@
     [{ label: 'Пункт 3 0', href: '' }]
   ];
 
-  const title = 'Tailwind CSS • DVA';
+  const title = 'DAKS • Tailwind CSS';
   const description = 'фреймворк компонующий CSS классы для создания любого дизайна Tailwind CSS';
 
   onMount(() => document?.lazyloadInstance?.update());
 </script>
 
-<Metrika
+<YandexMetrikaHit
   {title}
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content mb-16">
-    <h1 class="mb-2 title">Tailwind&nbsp;CSS&nbsp;!</h1>
+  <header class="content">
+    <h1 class="title mb-2">Tailwind&nbsp;CSS&nbsp;!</h1>
     <h2>API для вашей системы проектирования</h2>
   </header>
 
-  <div class="content pb-16">
+  <div class="content">
     <p>
       Служебные классы <strong>Tailwind CSS</strong> помогают Вам работать в рамках ограничений
       системы вместо того, чтобы загромождать ваши таблицы стилей произвольными значениями.

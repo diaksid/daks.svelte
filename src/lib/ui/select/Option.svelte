@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { outside } from '$utils/event';
+  import { outside } from 'daks-svelte/utils/event';
 
   //let className = '';
   //export { className as class };
@@ -9,31 +9,24 @@
   //export let duration = 300;
 
   const classes = ['pointer-events-none', 'opacity-0', 'scale-y-75'];
-  const close = (node: null | HTMLElement) => {
-    const el = node?.nextElementSibling;
-    el?.classList.contains('pointer-events-none') || el?.classList.add(...classes);
-  };
-  const toggle = (ev: Event) => {
-    const el = (ev.target as HTMLElement).nextElementSibling;
-    console.log(el);
-    if (el?.classList.contains('pointer-events-none')) el.classList.remove(...classes);
-    else el?.classList.add(...classes);
-  };
+
+  const close = (node?: HTMLElement) =>
+    node?.parentElement?.nextElementSibling?.classList.add(...classes);
+
+  const toggle = (event: any) =>
+    classes.forEach((val) => event.parentElement?.nextElementSibling?.classList.toggle(val));
 </script>
 
 <div>
-  <!-- svelte-ignore a11y-label-has-associated-control -->
-  <label
-    id="listbox-label"
-    class="block text-sm font-medium text-gray-700"
-    htmlfor="listbox-button">Assigned to</label>
+  <div class="block text-sm font-medium text-gray-700">
+    Assigned to
+  </div>
   <div class="relative mt-1">
     <button
       use:outside={close}
       on:click|preventDefault|stopPropagation={toggle}
       on:dblclick
       on:keypress
-      id="listbox-button"
       type="button"
       class="relative
              w-full py-2 pl-3 pr-10

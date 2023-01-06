@@ -1,16 +1,20 @@
-const config: NavLink[] = [
-  {
-    href: '/',
-    label: 'Главная'
-  },
-  {
-    href: '/svelte',
-    label: 'Svelte'
-  },
-  {
-    href: '/tailwindcss',
-    label: 'Tailwind CSS'
-  }
-];
+const config = {
+  navbar: [
+    {
+      href: '/svelte',
+      label: 'Svelte'
+    },
+    {
+      href: '/tailwindcss',
+      label: 'Tailwind CSS'
+    }
+  ],
+  footer: [
+    {
+      href: '/privacy',
+      label: 'Политика конфиденциальности'
+    }
+  ]
+};
 
 export default config;

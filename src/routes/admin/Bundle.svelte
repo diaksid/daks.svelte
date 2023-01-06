@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon } from '$ui/iconfy';
+  import { Icon } from 'daks-svelte';
 
   export let prefix: string;
   export let icons: string[];

@@ -1,29 +1,31 @@
 <script lang="ts">
-  import { Icon } from '$ui/iconfy';
-  import { Hit as Metrika } from '$ui/yandex/metrika';
-  //import { Icon } from '$ui/iconfy';
+  import { Icon, YandexMetrikaHit } from 'daks-svelte';
 
-  const title = 'DAks • WEB разработка';
+  const title = 'DAKS • WEB разработка';
   const description = 'DAks DEV: WEB разработка HTML, JS, CSS, Svelte, Tailwind CSS';
 </script>
 
-<Metrika
+<YandexMetrikaHit
   {title}
   {description} />
 
 <main
-  class="flex flex-col justify-center items-center text-center h-screen"
+  class="justify-center items-center text-center"
   itemprop="mainContentOfPage">
   <header class="mb-4">
     <h1 class="mb-4 lg:mb-16 text-2xl lg:text-3xl xl:text-4xl !text-slate-400">
       HTML5 • CSS3 • JS
     </h1>
     <h2
-      class="mb-4 lg:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-7xl dark:text-slate-300 text-shadow">
+      class="mb-4 lg:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-7xl dark:text-slate-300 text-shadow"
+      style:--text-shadow-val="4px">
       • Svelte •
     </h2>
     <h2
-      class="mb-12 lg:mb-24 text-2xl md:text-4xl lg:text-5xl xl:text-6xl dark:text-slate-300 text-shadow">
+      class="mb-12 lg:mb-24 text-2xl md:text-4xl lg:text-5xl xl:text-6xl dark:text-slate-300 text-shadow"
+      style:--text-shadow-val="4px"
+      style:--text-shadow-color="rgba(255,255,255,.25)"
+      >
       • Tailwind CSS •
     </h2>
     <h3 class="text-lg md:text-xl xl:text-2xl !text-slate-500">&copy; DVA [DAks]</h3>

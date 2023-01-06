@@ -1,17 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Hit as Metrika } from '$ui/yandex/metrika';
-  import { Form, Serp } from '$ui/yandex/search';
+  import { YandexMetrikaHit, YandexSearchForm, YandexSearchSerp } from 'daks-svelte';
 
   const robots = 'noindex, follow';
-  const title = 'СКМ • Поиск';
-  const description = 'Поиск на сайте предпрятия СКМ';
+  const title = 'DAKS • Поиск';
+  const description = 'Поиск на сайте предпрятия DAKS';
   const canonical = '';
 
   onMount(() => document?.lazyloadInstance?.update());
 </script>
 
-<Metrika
+<YandexMetrikaHit
   {robots}
   {title}
   {description}
@@ -24,7 +23,10 @@
     <h1 class="title">Результаты поиска</h1>
   </header>
 
-  <Form class="content mb-8 px-8 xs:pr-[44px] sm:pr-[52px] md:pr-[55px] lg:pr-[142px]" reload={true} />
+  <YandexSearchForm
+    class="content mb-8 px-8 xs:pr-[44px] sm:pr-[52px] md:pr-[55px] lg:pr-[142px]"
+    reload={true}
+    reverse={true} />
 
-  <Serp class="content mb-16 pr-8 lg:pr-4" />
+  <YandexSearchSerp class="content mb-16 pr-8 lg:pr-4" />
 </main>

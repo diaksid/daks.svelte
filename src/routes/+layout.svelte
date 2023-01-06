@@ -1,11 +1,10 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import LazyLoad from 'vanilla-lazyload';
-  import { Navbar } from '$components/navbar';
-  import { Footer } from '$components/footer';
-  import { RouteTransition } from '$ui/route-transition';
-  import { ScreenBlock } from '$ui/screen-block';
-  import { Init as Metrika } from '$ui/yandex/metrika';
+  import { Navbar, Footer, ScreenBlock, RouteTransition } from 'daks-svelte';
+  import YandexMetrikaInit from 'daks-svelte/seo/yandex/metrika/YandexMetrikaInit.svelte';
+
+  import navigation from '$lib/configs/navigation';
 
   import website from '$lib/configs/website';
   const { shortName, themeColor, tileColor } = website;
@@ -17,11 +16,17 @@
 
   const build = import.meta.env.VITE_APP_BUILD;
 
-  if (browser && !document.lazyloadInstance)
-    document.lazyloadInstance = new LazyLoad({
-      // use_native: true,
-      threshold: 0
-    });
+  if (browser) {
+    if (!('color-theme' in localStorage)) {
+      localStorage.setItem('color-theme', 'dark');
+      document.documentElement.classList.add('dark');
+    }
+    if (!document.lazyloadInstance)
+      document.lazyloadInstance = new LazyLoad({
+        // use_native: true,
+        threshold: 0
+      });
+  }
 </script>
 
 <svelte:head>
@@ -50,14 +55,19 @@
     content={shortName} />
 </svelte:head>
 
-<Navbar />
+<Navbar
+  links={navigation.navbar}
+  centered={false} />
 
-<RouteTransition referesh={data.referesh}>
+<RouteTransition
+  referesh={data.referesh}
+  mode={1}
+  class="flex flex-col grow">
   <slot />
 </RouteTransition>
 
-<Footer />
+<Footer links={navigation.footer}>DAks DEV</Footer>
 
 <ScreenBlock class="bg-slate-800" />
 
-<Metrika />
+<YandexMetrikaInit />

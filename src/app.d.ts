@@ -10,6 +10,8 @@ declare namespace App {
   // interface Platform {}
 }
 
+declare module 'daks-svelte';
+
 interface MenuItem {
   label: string;
   title?: string;

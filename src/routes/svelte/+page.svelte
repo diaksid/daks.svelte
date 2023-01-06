@@ -1,24 +1,24 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Hit as Metrika } from '$ui/yandex/metrika';
+  import { YandexMetrikaHit } from 'daks-svelte';
 
-  const title = 'Svelte • DVA';
+  const title = 'DAKS • Svelte';
   const description = 'Фреймворк разработки кибернетически улучшенных веб-приложений Svelte';
 
   onMount(() => document?.lazyloadInstance?.update());
 </script>
 
-<Metrika
+<YandexMetrikaHit
   {title}
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content mb-16">
-    <h1 class="mb-2 title">Svelte&nbsp;!</h1>
+  <header class="content">
+    <h1 class="title mb-2">Svelte&nbsp;!</h1>
     <h2>кибернетически улучшенные веб-приложения</h2>
   </header>
 
-  <div class="content pb-16">
+  <div class="content">
     <p>
       <strong>Svelte</strong> это радикально новый подход к созданию пользовательских интерфейсов. В
       то время как традиционные фреймворки, такие как <em>React</em> и <em>Vue</em>, выполняют

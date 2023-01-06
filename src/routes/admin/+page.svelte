@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Icon } from '$ui/iconfy';
+  import { Icon } from 'daks-svelte';
   import Bundle from './Bundle.svelte';
-  import bundles from '$ui/iconfy/bundles.json';
-  import custom from '$ui/iconfy/custom';
+  import bundles from 'daks-svelte/ui/iconfy/bundles.json';
+  import custom from 'daks-svelte/ui/iconfy/custom';
 
   //import type { PageData } from './$types';
   //export let data: PageData;
@@ -29,11 +29,11 @@
   <meta
     name="robots"
     content="noindex, follow" />
-  <title>СКМ • Администрирование</title>
+  <title>DAKS • Администрирование</title>
 </svelte:head>
 
 <main>
-  <header class="content w-full mb-16">
+  <header class="content">
     <h1 class="title">Администрирование</h1>
   </header>
 
