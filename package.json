@@ -1,6 +1,6 @@
 {
   "name": "daks.svelte",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "DVA development",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "autoprefixer": "*",
     "cssnano": "*",
     "cssnano-preset-advanced": "*",
-    "daks-svelte": "*",
+    "daks-svelte": "0.0.13",
     "dotenv": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",

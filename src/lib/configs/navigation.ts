@@ -1,20 +1,29 @@
 const config = {
-  navbar: [
-    {
-      href: '/svelte',
-      label: 'Svelte'
+  navbar: {
+    links: [
+      {
+        href: '/svelte',
+        label: 'Svelte'
+      },
+      {
+        href: '/tailwindcss',
+        label: 'Tailwind CSS'
+      }
+    ]
+  },
+  footer: {
+    copylink: {
+      href: '//daks.dev',
+      target: '_blank',
+      label: 'daks dev'
     },
-    {
-      href: '/tailwindcss',
-      label: 'Tailwind CSS'
-    }
-  ],
-  footer: [
-    {
-      href: '/privacy',
-      label: 'Политика конфиденциальности'
-    }
-  ]
+    links: [
+      {
+        href: '/privacy',
+        label: 'Политика конфиденциальности'
+      }
+    ]
+  }
 };
 
 export default config;

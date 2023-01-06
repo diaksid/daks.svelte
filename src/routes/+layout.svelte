@@ -1,8 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import LazyLoad from 'vanilla-lazyload';
-  import { Navbar, Footer, ScreenBlock, RouteTransition } from 'daks-svelte';
-  import YandexMetrikaInit from 'daks-svelte/seo/yandex/metrika/YandexMetrikaInit.svelte';
+  import { Navbar, Footer, ScreenBlock, RouteTransition, YandexMetrikaInit } from 'daks-svelte';
 
   import navigation from '$lib/configs/navigation';
 
@@ -55,10 +54,6 @@
     content={shortName} />
 </svelte:head>
 
-<Navbar
-  links={navigation.navbar}
-  centered={false} />
-
 <RouteTransition
   referesh={data.referesh}
   mode={1}
@@ -66,7 +61,9 @@
   <slot />
 </RouteTransition>
 
-<Footer links={navigation.footer}>DAks DEV</Footer>
+<Footer {...navigation.footer}>DAks DEV</Footer>
+
+<Navbar {...navigation.navbar} />
 
 <ScreenBlock class="bg-slate-800" />
 

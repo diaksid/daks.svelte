@@ -27,13 +27,15 @@
         Обнаружена ошибка {$page.status}
       {/if}
     </p>
-    <!--{#if $page.status >= 500}
+    <!--
+    {#if $page.status >= 500}
       {#if dev && $page.error?.stack}
         <pre>{$page.error.stack}</pre>
       {:else}
         <p>Please try reloading the page.</p>
       {/if}
-    {/if}-->
+    {/if}
+    -->
   {:else}
     <h1 class="w-full mt-auto text-4xl leading-loose">
       Похоже отсутствует подключение к интернету
