@@ -1,19 +1,20 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import type { MenuItem, NavLink } from 'daks-svelte/types';
   import Dropdown from '$lib/ui/dropdown';
   import Select from '$lib/ui/select';
   import { YandexMetrikaHit } from 'daks-svelte';
 
-  const items = [
+  const items: (MenuItem | NavLink)[][] = [
     [{ label: 'Пункт 0 0', href: '' }],
     [
       { label: 'Пункт 1 0', href: '' },
-      { label: 'Пункт 1 1', handle: () => alert('1 1') }
+      { name: 'Пункт 1 1', handle: () => alert('1 1') }
     ],
     [
       { label: 'Пункт 2 0', href: '' },
       { label: 'Пункт 2 1', href: '' },
-      { label: 'Пункт 2 2' }
+      { name: 'Пункт 2 2' }
     ],
     [{ label: 'Пункт 3 0', href: '' }]
   ];

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { outside } from 'daks-svelte/utils/event';
+  import type { MenuItem, NavLink } from 'daks-svelte/types';
   import Items from './Items.svelte';
   import Item from './Item.svelte';
 
@@ -10,7 +11,7 @@
   export let title = '';
 
   export let duration = 300;
-  export let items!: MenuItem[] | MenuItem[][];
+  export let items!: (MenuItem | NavLink)[][];
 
   const classes = ['pointer-events-none', 'opacity-0', 'scale-75'];
 

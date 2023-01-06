@@ -1,7 +1,8 @@
 <script lang="ts">
+  import type { MenuItem, NavLink } from 'daks-svelte/types';
   import Item from './Item.svelte';
 
-  export let items!: MenuItem[] | NavLink[];
+  export let items!: (MenuItem | NavLink)[];
 </script>
 
 <div
