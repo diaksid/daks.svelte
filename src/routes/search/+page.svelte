@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  //import { onMount } from 'svelte';
   import { YandexMetrikaHit, YandexSearchForm, YandexSearchSerp } from 'daks-svelte';
 
   const robots = 'noindex, follow';
   const title = 'DAKS • Поиск';
-  const description = 'Поиск на сайте предпрятия DAKS';
+  const description = 'Поиск на сайте DAKS DEV';
   const canonical = '';
 
-  onMount(() => document?.lazyloadInstance?.update());
+  //onMount(() => document?.lazyloadInstance?.update());
 </script>
 
 <YandexMetrikaHit
@@ -16,10 +16,8 @@
   {description}
   {canonical} />
 
-<main
-  class="dark:bg-transparent"
-  itemprop="mainContentOfPage">
-  <header class="content w-full mb-8">
+<main itemprop="mainContentOfPage">
+  <header class="content">
     <h1 class="title">Результаты поиска</h1>
   </header>
 
@@ -28,5 +26,5 @@
     reload={true}
     reverse={true} />
 
-  <YandexSearchSerp class="content mb-16 pr-8 lg:pr-4" />
+  <YandexSearchSerp class="content pr-8 lg:pr-4" />
 </main>

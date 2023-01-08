@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon, YandexMetrikaHit } from 'daks-svelte';
+  import { YandexMetrikaHit } from 'daks-svelte';
 
   const title = 'DAKS • WEB разработка';
   const description = 'DAks DEV: WEB разработка HTML, JS, CSS, Svelte, Tailwind CSS';
@@ -36,10 +36,11 @@
            transition-all duration-300 ease-in-out"
     href="https://github.com/diaksid/daks.svelte"
     target="_blank">
-    <Icon
+    2022 &star; Svelte.Kit
+    <!--Icon
       icon="line-md:github-loop"
       class="w-[20vmin] h-[20vmin] vector-non-scaling-stroke">
       2022 &star; Svelte.Kit
-    </Icon>
+    </Icon-->
   </a>
 </main>

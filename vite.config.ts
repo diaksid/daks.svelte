@@ -1,6 +1,6 @@
 import type { UserConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { imagetools } from 'vite-imagetools';
+//import { imagetools } from 'vite-imagetools';
 //import { minifyPlugin } from './vite.plugins'
 
 /*
@@ -17,8 +17,8 @@ process.env.APP_VERSION ??= pkg.version;
 const config: UserConfig = {
   logLevel: 'error',
   plugins: [
-    sveltekit(),
-    imagetools({
+    sveltekit()
+    /*imagetools({
       defaultDirectives: new URLSearchParams({
         quality: '80',
         fit: 'cover',
@@ -26,7 +26,7 @@ const config: UserConfig = {
         meta: 'width;height;quality;src'
       })
     })
-//  minifyPlugin(),
+    minifyPlugin(),*/
 ],
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}']

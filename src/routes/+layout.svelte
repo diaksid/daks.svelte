@@ -1,6 +1,6 @@
 <script lang="ts">
   import { browser } from '$app/environment';
-  import LazyLoad from 'vanilla-lazyload';
+  //import LazyLoad from 'vanilla-lazyload';
   import { Navbar, Footer, ScreenBlock, RouteTransition, YandexMetrikaInit } from 'daks-svelte';
 
   import navigation from '$lib/configs/navigation';
@@ -20,11 +20,11 @@
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
     }
-    if (!document.lazyloadInstance)
+    /*if (!document.lazyloadInstance)
       document.lazyloadInstance = new LazyLoad({
         // use_native: true,
         threshold: 0
-      });
+      });*/
   }
 </script>
 
@@ -61,7 +61,7 @@
   <slot />
 </RouteTransition>
 
-<Footer {...navigation.footer}>DAks DEV</Footer>
+<Footer {...navigation.footer} />
 
 <Navbar {...navigation.navbar} />
 

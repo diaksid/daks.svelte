@@ -38,7 +38,7 @@
     "autoprefixer": "*",
     "cssnano": "*",
     "cssnano-preset-advanced": "*",
-    "daks-svelte": "0.0.13",
+    "daks-svelte": "*",
     "dotenv": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
@@ -52,13 +52,10 @@
     "rimraf": "*",
     "svelte": "*",
     "svelte-check": "*",
-    "svelte-preprocess": "*",
     "tailwindcss": "*",
     "tslib": "*",
     "typescript": "*",
-    "vanilla-lazyload": "*",
     "vite": "*",
-    "vite-imagetools": "*",
     "vitest": "*"
   },
   "type": "module"

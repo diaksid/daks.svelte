@@ -1,5 +1,5 @@
 /// <reference types="@sveltejs/kit" />
-
+/*
 import type { ILazyLoadInstance } from 'vanilla-lazyload';
 
 declare global {
@@ -7,3 +7,4 @@ declare global {
     lazyloadInstance: ILazyLoadInstance;
   }
 }
+*/

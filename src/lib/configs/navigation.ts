@@ -13,9 +13,8 @@ const config = {
   },
   footer: {
     copylink: {
-      href: '//daks.dev',
-      target: '_blank',
-      label: 'daks dev'
+      href: '/',
+      label: 'DAks&nbsp;DEV'
     },
     links: [
       {
