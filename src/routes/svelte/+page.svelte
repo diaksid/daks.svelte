@@ -1,11 +1,11 @@
 <script lang="ts">
-  //import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   import { YandexMetrikaHit } from 'daks-svelte';
 
   const title = 'DAKS • Svelte';
   const description = 'Фреймворк разработки кибернетически улучшенных веб-приложений Svelte';
 
-  //onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyloadInstance?.update());
 </script>
 
 <YandexMetrikaHit

@@ -1,45 +1,31 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
-  //import LazyLoad from 'vanilla-lazyload';
+  import LazyLoad from 'vanilla-lazyload';
   import { Navbar, Footer, ScreenBlock, RouteTransition, YandexMetrikaInit } from 'daks-svelte';
 
-  import navigation from '$lib/configs/navigation';
-
-  import website from '$lib/configs/website';
-  const { shortName, themeColor, tileColor } = website;
+  import '../app.css';
 
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import '../app.css';
+  import app from '$lib/configs/app';
+  const { shortName, themeColor, tileColor } = app;
 
-  const build = import.meta.env.VITE_APP_BUILD;
+  import navigation from '$lib/configs/navigation';
 
-  if (browser) {
+  if (!import.meta.env.SSR) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
     }
-    /*if (!document.lazyloadInstance)
+    if (!document.lazyloadInstance)
       document.lazyloadInstance = new LazyLoad({
         // use_native: true,
         threshold: 0
-      });*/
+      });
   }
 </script>
 
 <svelte:head>
-  <link
-    rel="alternate icon"
-    href="/favicon.ico?v={build}"
-    sizes="any" />
-  <link
-    rel="apple-touch-icon"
-    href="/favicon/maskable/192.png?v={build}" />
-  <link
-    rel="icon"
-    href="/favicon/icon.svg?v={build}"
-    type="image/svg+xml" />
   <meta
     name="theme-color"
     content={themeColor} />

@@ -1,5 +1,5 @@
 <script lang="ts">
-  //import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   import type { MenuItem, NavLink } from 'daks-svelte/types';
   import { Dropdown, Select } from 'daks-svelte';
   import { YandexMetrikaHit } from 'daks-svelte';
@@ -21,7 +21,7 @@
   const title = 'DAKS • Tailwind CSS';
   const description = 'фреймворк компонующий CSS классы для создания любого дизайна Tailwind CSS';
 
-  //onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyloadInstance?.update());
 </script>
 
 <YandexMetrikaHit

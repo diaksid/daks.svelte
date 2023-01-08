@@ -1,6 +1,6 @@
 {
   "name": "daks.svelte",
-  "version": "1.0.10",
+  "version": "1.2.2",
   "description": "DVA development",
   "repository": {
     "type": "git",
@@ -55,7 +55,9 @@
     "tailwindcss": "*",
     "tslib": "*",
     "typescript": "*",
+    "vanilla-lazyload": "*",
     "vite": "*",
+    "vite-imagetools": "*",
     "vitest": "*"
   },
   "type": "module"
