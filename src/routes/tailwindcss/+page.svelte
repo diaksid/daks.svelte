@@ -1,9 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import type { MenuItem, NavLink } from 'daks-svelte/types';
-  import { Dropdown, Select } from 'daks-svelte';
-  import { YandexMetrikaHit } from 'daks-svelte';
-
+  import type { MenuItem, NavLink } from 'daks-svelte';
+  import { YandexMetrikaHit, Dropdown, Select } from 'daks-svelte';
+  
   const items: (MenuItem | NavLink)[][] = [
     [{ label: 'Пункт 0 0', href: '' }],
     [
