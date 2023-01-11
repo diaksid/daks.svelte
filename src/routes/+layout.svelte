@@ -1,15 +1,13 @@
 <script lang="ts">
   import LazyLoad from 'vanilla-lazyload';
   import { Navbar, Footer, ScreenBlock, RouteTransition, YandexMetrikaInit } from 'daks-svelte';
-
+  import '$iconify';
   import '../app.css';
 
   import type { PageData } from './$types';
   export let data: PageData;
 
   import app from '$lib/configs/app';
-  const { shortName, themeColor, tileColor } = app;
-
   import navigation from '$lib/configs/navigation';
 
   if (!import.meta.env.SSR) {
@@ -28,16 +26,16 @@
 <svelte:head>
   <meta
     name="theme-color"
-    content={themeColor} />
+    content={app.themeColor} />
   <meta
     name="msapplication-TileColor"
-    content={tileColor} />
+    content={app.tileColor} />
   <meta
     name="application-name"
-    content={shortName} />
+    content={app.shortName} />
   <meta
     name="apple-mobile-web-app-title"
-    content={shortName} />
+    content={app.shortName} />
 </svelte:head>
 
 <RouteTransition

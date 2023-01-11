@@ -1,11 +1,11 @@
 <script lang="ts">
-  //import { onMount } from 'svelte';
-  import { YandexMetrikaHit } from 'daks-svelte';
+  import { onMount } from 'svelte';
+  import { YandexMetrikaHit, Icon } from 'daks-svelte';
 
   const title = 'DAKS • WEB разработка';
   const description = 'DAks DEV: WEB разработка HTML, JS, CSS, Svelte, Tailwind CSS';
 
-  //onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyloadInstance?.update());
 </script>
 
 <YandexMetrikaHit
@@ -13,7 +13,7 @@
   {description} />
 
 <main
-  class="justify-center items-center text-center"
+  class="grow justify-center items-center text-center"
   itemprop="mainContentOfPage">
   <header class="mb-4">
     <h1 class="mb-4 lg:mb-16 text-2xl lg:text-3xl xl:text-4xl !text-slate-400">
@@ -40,10 +40,10 @@
     href="https://github.com/diaksid/daks.svelte"
     target="_blank">
     2022 &star; Svelte.Kit
-    <!--Icon
+    <Icon
       icon="line-md:github-loop"
       class="w-[20vmin] h-[20vmin] vector-non-scaling-stroke">
       2022 &star; Svelte.Kit
-    </Icon-->
+    </Icon>
   </a>
 </main>
